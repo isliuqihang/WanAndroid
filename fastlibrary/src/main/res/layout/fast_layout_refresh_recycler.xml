@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smart.refresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/smartLayout_rootFastLib"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.lqh.fastlibrary.view.multistatepage.MultiStateContainer
+        android:id="@+id/multi_state_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/fast_layout_recycler" />
+    </com.lqh.fastlibrary.view.multistatepage.MultiStateContainer>
+
+</com.scwang.smart.refresh.layout.SmartRefreshLayout>

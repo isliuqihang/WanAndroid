@@ -1,0 +1,113 @@
+// 通用配置
+android {
+
+    // 编译源码版本
+    compileSdkVersion 30
+    defaultConfig {
+        // 最低安装版本
+        minSdkVersion 21
+        // 目标适配版本
+        targetSdkVersion 30
+        versionName '1.0'
+        versionCode 10
+        //versionCode new Date().format("yyyyMMdd") as int
+    }
+
+    // 支持 Java JDK 8
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // 设置存放 so 文件的目录
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    // 代码警告配置
+    lintOptions {
+        // 禁用文本硬编码警告
+        disable 'HardcodedText'
+    }
+
+    // 可在 Studio 左侧 Build Variants 选项中切换默认的构建模式
+    buildTypes {
+        // 调试版本
+        debug {}
+        // 预览版本
+        preview {}
+        // 正式版本
+        release {}
+    }
+}
+
+dependencies {
+    // 依赖 libs 目录下所有的 jar 和 aar 包
+    implementation fileTree(include: ["*.jar", '*.aar'], dir: "libs")
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    //万能适配器
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
+    //下拉刷新库
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.3'
+    implementation 'com.scwang.smart:refresh-header-material:2.0.3'
+    implementation  'com.scwang.smart:refresh-footer-classics:2.0.1'    //经典加载
+
+    //图片加载
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    //常用UI控件(TitleBarView、RadiusView等)
+
+//    implementation "com.github.AriesHoo.UIWidget:widget-core:3.2.25"
+
+    //日志打印
+    implementation 'com.orhanobut:logger:2.2.0'
+    // Json 解析框架：https://github.com/google/gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+
+    implementation 'com.trello.rxlifecycle3:rxlifecycle-components:3.1.0'
+    //webView库 继承FastWebActivity需要,不需要内置WebView可以不implementation
+    implementation 'com.github.Justson.AgentWeb:agentweb-core:v4.1.9-androidx' // (必选)
+    //页面事件交互-eventbus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'androidx.multidex:multidex:2.0.0'
+    //沉浸式主题栏
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    //Android常用工具类
+    implementation 'com.blankj:utilcodex:1.30.6'
+
+    //Rxhttp开始
+
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+    implementation 'com.github.liujingxing.rxhttp:rxhttp:2.7.2'
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.1'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'com.github.liujingxing.rxlife:rxlife-rxjava3:2.2.1'
+//    implementation 'com.github.liujingxing.rxlife:rxlife-coroutine:2.1.0'
+
+    //Rxhttp结束
+
+    //material-dialogs
+    implementation 'com.afollestad.material-dialogs:core:3.3.0'
+    implementation 'com.afollestad.material-dialogs:input:3.3.0'
+    implementation 'com.afollestad.material-dialogs:bottomsheets:3.3.0'
+    implementation 'com.afollestad.material-dialogs:lifecycle:3.3.0'
+    //material-dialogs结束
+
+    implementation 'com.github.lygttpod:SuperTextView:2.4.6'
+//    implementation 'com.github.getActivity:TitleBar:8.6'
+    implementation 'com.github.zhaokaiqiang.klog:library:1.6.0'
+
+    implementation 'com.github.JavaNoober.BackgroundLibrary:libraryx:1.7.2'
+
+    implementation 'com.github.donkingliang:ConsecutiveScroller:4.6.0'
+    implementation 'com.github.dongjunkun:DropDownMenu:1.0.3'
+//    https://github.com/baiiu/DropDownMenu
+    implementation 'io.github.youth5201314:banner:2.2.2'
+    implementation 'com.github.kelinZhou:Banner:2.8.1'
+}

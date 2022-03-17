@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.lqh.fastlibrary.view.titanic.TitanicTextView
+        android:id="@+id/my_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="加载中,请稍等..."
+        android:textColor="#212121"
+        android:textSize="20sp" />
+
+    <com.allen.library.SuperButton
+        android:id="@+id/sbt_start"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:text="开始动"
+        app:sCornersRadius="@dimen/dp_4"
+        app:sSelectorNormalColor="@color/blue_btn_bg_color"
+        app:sSelectorPressedColor="@color/blue_btn_bg_pressed_color" />
+
+    <com.allen.library.SuperButton
+        android:id="@+id/sbt_end"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="50dp"
+        android:text="停止"
+        app:sCornersRadius="@dimen/dp_4"
+        app:sSelectorNormalColor="@color/blue_btn_bg_color"
+        app:sSelectorPressedColor="@color/blue_btn_bg_pressed_color" />
+
+</LinearLayout>

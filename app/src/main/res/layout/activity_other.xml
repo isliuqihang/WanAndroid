@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <include layout="@layout/fast_layout_title_bar" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ly_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/stv_tipToast"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:sLeftTextString="提示弹窗" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/stv_sweetDialog"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:sLeftTextString="SweetDialog" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/stv_list"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:sLeftTextString="列表加载" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/stv_login"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:sLeftTextString="登录页面" />
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/stv_filter"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:sLeftTextString="下拉筛选" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

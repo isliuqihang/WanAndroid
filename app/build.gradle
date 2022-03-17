@@ -1,0 +1,106 @@
+//apply plugin : 'com.android.application'
+////apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-kapt'
+//apply plugin: 'android-aspectjx'
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.protobuf'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply from: '../config.gradle'
+
+android {
+
+    defaultConfig {
+        applicationId "com.lqh.wanandroid"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "Boolean", "LOG_ENABALE", "true"
+//        javaCompileOptions {
+//            annotationProcessorOptions {
+//                arguments = [
+//                        rxhttp_rxjava: 'rxjava3']
+//            }
+//        }
+
+    }
+    kapt {
+        arguments {
+            arg("rxhttp_rxjava", "3.1.1") //可传入rxjava2、rxjava3或具体版本号，如 3.1.1
+//            arg("rxhttp_package", "rxhttp") //设置RxHttp相关类的包名，多module依赖时，需要配置不同的包名
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    //编写编译任务，调用plugin编译生成java文件
+    protobuf {
+        protoc {
+            artifact = 'com.google.protobuf:protoc:3.0.0'//编译器版本
+        }
+
+        plugins {
+            javalite {
+                artifact = 'com.google.protobuf:protoc-gen-javalite:3.0.0'
+//指定当前工程使用的protobuf版本为javalite版，以生成javalite版的java类
+            }
+        }
+        generateProtoTasks.generatedFilesBaseDir = "$projectDir/src/main/java" //指定编译生成java类的存放位置
+        generateProtoTasks {
+            all().each { task ->
+                task.plugins {
+                    javalite {
+                        outputSubDir = '' //指定存放位置的二级目录，这里未指定
+                    }
+                }
+            }
+        }
+    }
+//指定原始.proto文件的位置
+    android {
+        sourceSets {
+            main {
+                java {
+                    srcDirs 'src/main/java'
+                }
+                proto {
+                    srcDirs 'src/main/proto'
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation project(':fastlibrary')
+    implementation 'com.github.ParfoisMeng:SlideBack:1.0.7'
+
+    kapt 'com.github.liujingxing.rxhttp:rxhttp-compiler:2.7.2'
+
+    implementation 'com.alibaba:fastjson:1.2.78'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.google.android:flexbox:2.0.1'
+    implementation 'com.google.protobuf:protobuf-lite:3.0.0' //依赖protobuf-lite库
+    implementation ('com.github.liujingxing.rxhttp:converter-protobuf:2.8.4') {
+//        exclude group: 'com.google.protobuf', module: 'protobuf'
+        exclude module: 'protobuf'
+        exclude group: 'com.google.protobuf'
+
+    }
+    implementation 'com.danikula:videocache:2.7.0'
+    implementation 'io.github.lakehubo:com.lakehubo.hbanner:1.1.1-alpha'
+}

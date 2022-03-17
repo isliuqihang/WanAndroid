@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/fast_layout_title_bar" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_ad"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@color/blue_btn_bg_color" />
+
+    <com.lqh.wanandroid.view.banner.BannerMul
+        android:id="@+id/bannermul"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp_10" />
+
+
+    <com.lake.banner.view.BannerViewPager
+        android:id="@+id/viewpager_ad"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/dp_10" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

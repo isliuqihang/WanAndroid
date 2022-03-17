@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--TitleBarView 高度-->
+    <dimen name="dp_title_height">48dp</dimen>
+
+    <!--主页tab高度-->
+    <dimen name="dp_tab_height">48dp</dimen>
+    <!--主页tab icon宽高-->
+    <dimen name="dp_tab_icon">24dp</dimen>
+    <!--主页tab 文字与icon边距-->
+    <dimen name="dp_tab_margin">0dp</dimen>
+    <!--主页tab文字字号-->
+    <dimen name="dp_tab_text_size">11dp</dimen>
+    <!--主页tab 上划线宽度-->
+    <dimen name="dp_tab_underline">0.5dp</dimen>
+
+    <!--glide加载圆角图片占位图圆角弧度-->
+    <dimen name="dp_placeholder_radius">6dp</dimen>
+
+    <!--LoadMoreView 文本字号-->
+    <dimen name="dp_load_more_text_size">14dp</dimen>
+
+    <dimen name="dp_line_size">0.5dp</dimen>
+    <dimen name="dp_line_break">8dp</dimen>
+    <dimen name="dp_radius_loading">4dp</dimen>
+    <dimen name="dp_size_loading">36dp</dimen>
+    <dimen name="dp_min_width_loading">65dp</dimen>
+    <dimen name="dp_min_height_loading">65dp</dimen>
+
+
+    <dimen name="alert_width">290dp</dimen>
+    <dimen name="common_circle_width">3dp</dimen>
+    <dimen name="progress_circle_radius">34dp</dimen>
+
+    <dimen name="custom_image_size">53dp</dimen>
+    <dimen name="buttons_stroke_width">0sp</dimen>
+
+
+    <!-- textSize<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+    <dimen name="text_size_large">24sp</dimen>
+    <dimen name="text_size_huge">21sp</dimen>
+    <dimen name="text_size_big">19sp</dimen>
+    <dimen name="text_size_middle">16sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_micro">12sp</dimen>
+
+    <!-- textSize>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+
+    <!-- padding<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="padding_huge">15dp</dimen>
+    <dimen name="padding_big">9dp</dimen>
+    <dimen name="padding_middle">6dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_micro">2dp</dimen>
+
+    <!-- padding>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+
+    <!-- margin<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_huge">15dp</dimen>
+    <dimen name="margin_big">9dp</dimen>
+    <dimen name="margin_middle">6dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_micro">2dp</dimen>
+
+    <!-- margin>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+</resources>

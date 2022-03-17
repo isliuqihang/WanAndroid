@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/fast_layout_title_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.lqh.fastlibrary.view.tablayout.SlidingTabLayout
+        android:id="@+id/sld_tab_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleBar_headFastLib"
+        app:tl_indicator_color="@color/color_black_a10"
+        app:tl_indicator_style="BLOCK"
+        app:tl_indicator_width_equal_title="true"
+        app:tl_tab_space_equal="false"
+        app:tl_textSelectColor="@color/color_black"
+        app:tl_textSelectSize="@dimen/sp_14"
+        app:tl_textSize="@dimen/sp_12"
+        app:tl_textUnSelectColor="@color/color_black_a30" />
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sld_tab_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/multi_state_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <com.lqh.fastlibrary.view.loadingindicatorview.LoadingIndicatorView
+        android:id="@+id/status_layout_manager_pb_status_loading"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/dp_10"
+        app:indicatorColor="@color/black25"
+        app:indicatorName="BallSpinFadeLoaderIndicator" />
+
+    <TextView
+        android:id="@+id/tv_multi_state_loading_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/multi_state_loading_content"
+        android:textColor="@color/multi_status_retry_text_color"
+        android:textSize="16sp" />
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/fast_layout_title_bar" />
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/smartLayout_rootFastLib"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smart.refresh.header.MaterialHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.donkingliang.consecutivescroller.ConsecutiveScrollerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/scrollerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:scrollbars="none">
+
+            <com.youth.banner.Banner xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/banner_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+
+            <com.yyydjk.library.DropDownMenu
+                android:id="@+id/dropdownmenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:dddividerColor="@color/gray"
+                app:ddmaskColor="@color/mask_color"
+                app:ddmenuBackgroundColor="@color/white"
+                app:ddmenuSelectedIcon="@mipmap/drop_down_selected_icon"
+                app:ddmenuTextSize="13sp"
+                app:ddmenuUnselectedIcon="@mipmap/drop_down_unselected_icon"
+                app:ddtextSelectedColor="@color/drop_down_selected"
+                app:ddtextUnselectedColor="@color/drop_down_unselected"
+                app:ddunderlineColor="@color/gray"
+                app:layout_isSticky="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/teal_700"
+                    android:gravity="center"
+                    android:text="底部列表"
+                    android:textSize="20sp" />
+            </com.yyydjk.library.DropDownMenu>
+
+
+        </com.donkingliang.consecutivescroller.ConsecutiveScrollerLayout>
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

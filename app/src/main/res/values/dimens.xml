@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp_elevation">2dp</dimen>
+
+    <!-- 默认分割线大小 -->
+    <dimen name="line_size">1px</dimen>
+
+    <!-- 默认按钮的圆角大小 -->
+    <dimen name="button_round_size">999dp</dimen>
+
+    <!-- 通用对话框圆角大小 -->
+    <dimen name="dialog_ui_round_size">15dp</dimen>
+    <dimen name="sp_26">26sp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_6">6dp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+
+</resources>

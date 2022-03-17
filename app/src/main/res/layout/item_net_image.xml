@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.lqh.wanandroid.view.CornerImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/banner_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue_btn_bg_pressed_color"
+        android:scaleType="centerCrop" />
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_alignParentBottom="true"
+        android:background="@color/multi_state_bg"
+        android:gravity="center_vertical"
+        android:text="hakhksh" />
+</RelativeLayout>

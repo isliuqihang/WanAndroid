@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.lqh.fastlibrary.view.tablayout.SlidingTabLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sld_tab_layout"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    app:tl_divider_padding="2dp"
+    app:tl_indicator_color="@color/color_black_dark4_a93"
+    app:tl_indicator_style="BLOCK"
+    app:tl_indicator_width_equal_title="true"
+    app:tl_tab_space_equal="false"
+    app:tl_textSelectColor="@color/color_gray_light"
+    app:tl_textSelectSize="@dimen/sp_14"
+    app:tl_textSize="@dimen/sp_12"
+    app:tl_textUnSelectColor="@color/color_black_a30"
+
+    />

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp_6"
+    android:layout_margin="@dimen/dp_6">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新"
+        android:textColor="@color/color_blue"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_6"
+        android:text="林帅并不帅"
+        android:textColor="@color/color_black_a93"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintStart_toEndOf="@id/tv_new"
+        app:layout_constraintTop_toTopOf="@id/tv_new"
+        app:layout_goneMarginLeft="0dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_6"
+        android:background="@drawable/selector_article_tag_bg"
+        android:paddingHorizontal="@dimen/dp_4"
+        android:text="项目"
+        android:textColor="@color/color_blue"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@id/tv_author"
+        app:layout_constraintStart_toEndOf="@id/tv_author"
+        app:layout_constraintTop_toTopOf="@id/tv_author" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_6"
+        android:paddingHorizontal="@dimen/dp_4"
+        android:text="2021-11-15 16:13:12"
+        android:textColor="@color/color_gray_dark3"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_new" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cly_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_author"
+        app:layout_goneMarginTop="@dimen/dp_6">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_img"
+            android:layout_width="120dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="公众号文章列表强势上线公众号文章列表强势公众号文章列表强势上线公众号文章列表强势"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_img"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginLeft="0dp"
+            tools:singleLine="true" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="公众号文章列表强势上线公众号文章列表强势公众号文章列表强势上线公众号文章列表强势公众号文章列表强势上线公众号文章列表强势公众号文章列表强势上线公众号文章列表强势公众号文章列表强势上线公众号文章列表强势公众号文章列表强势上线公众号文章列表强势公众号文章列表强势上线公众号文章列表强势公众号文章列表强势上线公众号文章列表强势公众号文章列表强势上线公众号文章列表强势公众号文章列表强势上线公众号文章列表强势公众号文章列表强势上线公众号文章列表强势公众号文章列表强势上线公众号文章列表强势公众号文章列表强势上线公众号文章列表强势公众号文章列表强势上线公众号文章列表强势公众号文章列表强势上线公众号文章列表强势公众号文章列表强势上线公众号文章列表强势"
+            android:textColor="@color/color_black_a47"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_marginRight="@dimen/dp_10"
+        android:text="置顶"
+        android:textColor="@color/color_orange"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/tv_chapter_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cly_detail" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_chapter_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:text="置顶"
+        android:textColor="@color/color_black_a30"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintStart_toEndOf="@id/tv_top"
+        app:layout_constraintTop_toTopOf="@id/tv_top"
+        app:layout_goneMarginLeft="0dp"
+        app:layout_goneMarginTop="@dimen/dp_6" />
+</androidx.constraintlayout.widget.ConstraintLayout>

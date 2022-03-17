@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="LoadingIndicatorView">
+        <item name="minWidth">48dp</item>
+        <item name="maxWidth">48dp</item>
+        <item name="minHeight">48dp</item>
+        <item name="maxHeight">48dp</item>
+        <item name="indicatorName">BallPulseIndicator</item>
+    </style>
+
+
+    <style name="BaseDialogStyle">
+        <!--设置dialog的背景-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--Dialog的windowFrame框为无-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否显示title-->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否半透明-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--是否有遮盖-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!--背景是否模糊显示-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--点击非dialog关闭-->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <style name="ProgressViewDialogStyle" parent="BaseDialogStyle">
+        <!-- 对话框动画 -->
+        <item name="android:windowAnimationStyle">@style/PopWindowAnimStyle</item>
+    </style>
+    <!-- popup window 显示消失动画-->
+    <style name="PopWindowAnimStyle">
+        <item name="android:windowShowAnimation">@anim/dialog_enter</item>
+        <!-- 指定显示的动画xml  -->
+        <item name="android:windowHideAnimation">@anim/dialog_exit</item>
+        <!-- 指定消失的动画xml  -->
+    </style>
+
+    <style name="ActionSheetAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/push_up_in</item>
+        <item name="android:windowExitAnimation">@anim/push_up_out</item>
+    </style>
+
+    <style name="ActionSheetViewDialogStyle" parent="BaseDialogStyle">
+        <item name="android:windowAnimationStyle">@style/ActionSheetAnimation</item>
+    </style>
+
+    <style name="AlertViewDialogStyle" parent="BaseDialogStyle">
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <style name="LineGray">
+        <item name="android:background">@color/colorLineGray</item>
+    </style>
+
+    <style name="LineGray.Horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_line_size</item>
+    </style>
+
+    <style name="LineGray.Horizontal.BreakLeft">
+        <item name="android:layout_marginLeft">@dimen/dp_line_break</item>
+    </style>
+
+    <style name="LineGray.Horizontal.BreakRight">
+        <item name="android:layout_marginLeft">@dimen/dp_line_break</item>
+    </style>
+
+    <style name="LineGray.Horizontal.BreakAll">
+        <item name="android:layout_marginLeft">@dimen/dp_line_break</item>
+        <item name="android:layout_marginRight">@dimen/dp_line_break</item>
+    </style>
+
+    <style name="LineGray.Vertical">
+        <item name="android:layout_width">@dimen/dp_line_size</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+
+    <style name="alert_dialog_light" parent="android:Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@color/float_transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+
+        <item name="sweet_alert_bg_drawable">@drawable/dialog_background</item>
+        <item name="sweet_alert_title_text_color">@color/title_color</item>
+        <item name="sweet_alert_content_text_color">@color/message_color</item>
+    </style>
+
+    <style name="alert_dialog_dark" parent="alert_dialog_light">
+        <item name="android:backgroundDimAmount">0.8</item>
+        <item name="sweet_alert_bg_drawable">@drawable/dialog_background_dark</item>
+        <item name="sweet_alert_title_text_color">@color/title_color_dark</item>
+        <item name="sweet_alert_content_text_color">@color/message_color_dark</item>
+    </style>
+
+
+    <style name="dialog_blue_button" parent="android:Widget.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:minWidth">85dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/green_button_background</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:paddingLeft">21dp</item>
+        <item name="android:paddingRight">21dp</item>
+        <item name="android:textColor">@color/button_text_color</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:lines">1</item>
+    </style>
+</resources>
